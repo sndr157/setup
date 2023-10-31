@@ -1,6 +1,7 @@
 import express from 'express'
 import getBooks from './services/books/getBooks.js'
 import getBookById from './services/books/getBookById.js'
+import createBook from './services/books/createBook.js'
 
 const app = express()
 
@@ -17,6 +18,7 @@ app.get('/books', (req, res) => {
     res.status(500).send('Something went wrong while getting list of books!')
   }
 })
+
 app.get('/books/:id', (req, res) => {
   try {
     const { id } = req.params
@@ -30,6 +32,17 @@ app.get('/books/:id', (req, res) => {
   } catch (error) {
     console.error(error)
     res.status(500).send('Something went wrong while getting book by id!')
+  }
+})
+
+app.post('/books', (req, res) => {
+  try {
+    const { title, author, isbn, pages, available, genre } = req.body
+    const newBook = createBook(title, author, isbn, pages, available, genre)
+    res.status(201).json(newBook)
+  } catch (error) {
+    console.error(error)
+    res.status(500).send('Something went wrong while creating new book!')
   }
 })
 
