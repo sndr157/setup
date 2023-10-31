@@ -11,7 +11,7 @@ const router = express.Router()
 // Define routes
 
 // Route to get a list of books
-router.get('/books', (req, res) => {
+router.get('/', (req, res) => {
   try {
     const books = getBooks()
     res.status(200).json(books)
@@ -22,7 +22,7 @@ router.get('/books', (req, res) => {
 })
 
 // Route to get a specific book by ID
-router.get('/books/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   try {
     const { id } = req.params
     const book = getBookById(id)
@@ -39,7 +39,7 @@ router.get('/books/:id', (req, res) => {
 })
 
 // Route to update a book by ID
-router.put('/books/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   try {
     const { id } = req.params
     const { title, author, isbn, pages, available, genre } = req.body
@@ -52,7 +52,7 @@ router.put('/books/:id', (req, res) => {
 })
 
 // Route to Delete a book by ID
-router.delete('/books/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   try {
     const { id } = req.params
     const deletedBookId = deleteBook(id)
