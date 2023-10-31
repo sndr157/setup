@@ -1,27 +1,34 @@
 import express from 'express'
-import getBooks from './services/books/getBooks.js'
-import getBookById from './services/books/getBookById.js'
-import updateBookById from './services/books/updateBookById.js'
-import createBook from './services/books/createBook.js'
-import deleteBook from './services/books/deleteBook.js'
+import getBooks from '../services/books/getBooks.js'
+import createBook from '../services/books/createBook.js'
+import getBookById from '../services/books/getBookById.js'
+import updateBookById from '../services/books/updateBookById.js'
+import deleteBook from '../services/books/deleteBook.js'
 
-// Create a router instance
 const router = express.Router()
 
-// Define routes
-
-// Route to get a list of books
 router.get('/', (req, res) => {
   try {
-    const books = getBooks()
+    const { genre, available } = req.query
+    const books = getBooks(genre, available)
     res.status(200).json(books)
   } catch (error) {
     console.error(error)
-    res.status(500).send('Something went wrong while getting the list of books!')
+    res.status(500).send('Something went wrong while getting list of books!')
   }
 })
 
-// Route to get a specific book by ID
+router.post('/', (req, res) => {
+  try {
+    const { title, author, isbn, pages, available, genre } = req.body
+    const newBook = createBook(title, author, isbn, pages, available, genre)
+    res.status(201).json(newBook)
+  } catch (error) {
+    console.error(error)
+    res.status(500).send('Something went wrong while creating new book!')
+  }
+})
+
 router.get('/:id', (req, res) => {
   try {
     const { id } = req.params
@@ -34,11 +41,10 @@ router.get('/:id', (req, res) => {
     }
   } catch (error) {
     console.error(error)
-    res.status(500).send('Something went wrong while getting the book by id!')
+    res.status(500).send('Something went wrong while getting book by id!')
   }
 })
 
-// Route to update a book by ID
 router.put('/:id', (req, res) => {
   try {
     const { id } = req.params
@@ -47,11 +53,10 @@ router.put('/:id', (req, res) => {
     res.status(200).json(updatedBook)
   } catch (error) {
     console.error(error)
-    res.status(500).send('Something went wrong while updating the book by id!')
+    res.status(500).send('Something went wrong while updating book by id!')
   }
 })
 
-// Route to Delete a book by ID
 router.delete('/:id', (req, res) => {
   try {
     const { id } = req.params
@@ -70,5 +75,4 @@ router.delete('/:id', (req, res) => {
   }
 })
 
-// Export the router
 export default router
