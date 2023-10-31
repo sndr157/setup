@@ -49,7 +49,15 @@ router.put('/:id', (req, res) => {
   try {
     const { id } = req.params
     const { title, author, isbn, pages, available, genre } = req.body
-    const updatedBook = updateBookById(id, title, author, isbn, pages, available, genre)
+    const updatedBook = updateBookById(
+      id,
+      title,
+      author,
+      isbn,
+      pages,
+      available,
+      genre
+    )
     res.status(200).json(updatedBook)
   } catch (error) {
     console.error(error)
