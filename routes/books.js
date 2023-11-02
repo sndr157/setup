@@ -4,6 +4,7 @@ import createBook from '../services/books/createBook.js'
 import getBookById from '../services/books/getBookById.js'
 import updateBookById from '../services/books/updateBookById.js'
 import deleteBook from '../services/books/deleteBook.js'
+import authMiddleware from '../middleware/auth.js'
 
 const router = express.Router()
 

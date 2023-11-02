@@ -4,6 +4,7 @@ import createRecord from '../services/records/createRecord.js'
 import getRecordById from '../services/records/getRecordById.js'
 import updateRecordById from '../services/records/updateRecordById.js'
 import deleteRecord from '../services/records/deleteRecord.js'
+import authMiddleware from '../middleware/auth.js'
 
 const router = express.Router()
 
