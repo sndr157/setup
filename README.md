@@ -3,6 +3,11 @@
 
 Welcome to our school learning app's router project. This project aims to provide an organized and efficient way to manage routing within our educational application.
 
+##index dependencies
+
+![image](https://github.com/sndr157/setup/assets/127830026/8fd614f5-fd1e-4d82-8c42-f106bd8ef3bd)
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
