@@ -12,8 +12,15 @@ const createBook = (title, author, isbn, pages, available, genre) => {
   available,
   genre
 };
+//This is the line where we think there is a bug in the code
 
-  bookData.books.push(newBook);
+
+  try {
+    bookData.books.push(newBook);
+  } catch (error) {
+    console.log('Error in createBook')
+    console.log(error);
+  }
   return newBook;
 }
 
