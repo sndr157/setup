@@ -3,9 +3,10 @@
 
 Welcome to our school learning app's router project. This project aims to provide an organized and efficient way to manage routing within our educational application.
 
-##index dependencies
+## Index Dependencies
 
-![image](https://github.com/sndr157/setup/assets/127830026/0df33855-fd44-430b-9b1c-68643de4a4b3)
+
+![image](https://github.com/sndr157/setup/assets/127830026/64d9f187-5557-46ea-b67e-baacf9acc5a3)
 
 
 ## Table of Contents
@@ -36,6 +37,11 @@ To get started with the school learning app and its router project, follow these
 
 - Node.js
 - Dependencies (listed in package.json)
+
+### Terminal Screenshot
+
+![image](https://github.com/sndr157/setup/assets/127830026/9185c4b4-f243-45a5-8d39-81cc59ff8a68)
+
 
 ### Installation
 
