@@ -5,7 +5,7 @@ Welcome to our school learning app's router project. This project aims to provid
 
 ##index dependencies
 
-![image](https://github.com/sndr157/setup/assets/127830026/8fd614f5-fd1e-4d82-8c42-f106bd8ef3bd)
+![image](https://github.com/sndr157/setup/assets/127830026/0df33855-fd44-430b-9b1c-68643de4a4b3)
 
 
 ## Table of Contents
