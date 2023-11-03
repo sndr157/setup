@@ -50,7 +50,7 @@ Unravel the art of debugging server-side code using log statements and the built
 
 Now that you have a glimpse of our magical journey, it's time to start your Express adventure. Dive into the code, experiment, and watch your web development skills grow!
 
-Let the adventure begin! 🛡️⚔️🌟
+Let the adventure begin! 🛡️⚔️🌟 Here is the file structure!
 
 
 ![image](https://github.com/sndr157/setup/assets/127830026/64d9f187-5557-46ea-b67e-baacf9acc5a3)
